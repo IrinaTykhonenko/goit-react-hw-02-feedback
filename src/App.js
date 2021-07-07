@@ -3,6 +3,7 @@ import Statistics from "./components/Statistics";
 import FeedbackOptions from "./components/FeedbackOptions";
 import Section from "./components/Section";
 import Notification from "./components/Notification";
+import Container from "./components/Container";
 
 class App extends Component {
   state = {
@@ -35,7 +36,7 @@ class App extends Component {
     const { good, neutral, bad } = this.state;
 
     return (
-      <>
+      <Container>
         <Section title="Please leave Feedback">
           <FeedbackOptions
             options={Object.keys(this.state)}
@@ -55,7 +56,7 @@ class App extends Component {
             <Notification message="No feedback given"></Notification>
           )}
         </Section>
-      </>
+      </Container>
     );
   }
 }
